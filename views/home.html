@@ -1,12 +1,64 @@
 <html>
 <head>
     <title>Mercado Liebre</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #EAC926;
+        }
+
+        .header .header-brand {
+            width: 100%;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header .header-brand .header-brand-logo {
+            height: 40px;
+        }
+
+        .header .header-brand .header-brand-search {
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <img src="/assets/img/logo.png" alt="Mercado Liebre" />
+    <!-- HEADER :: BEGIN -->
+    <header class="header">
+        <div class="header-brand">
+            <img src="/assets/img/logo-mercado-liebre.svg" alt="Mercado Liebre" class="header-brand-logo" />
+            <input type="search" placeholder="¿Qué estas buscando?" class="header-brand-search" />
+        </div>
+        <div class="header-legend">
+            <h2>Comprá en cuotas y sin tarjeta de crédito</h2>
+        </div>
+        <nav class="header-menu">
+            <ul>
+                <li>Ofertas</li>
+                <li>Tiendas Oficiales</li>
+                <li>Vender</li>
+                <li>Ayuda</li>
+            </ul>
+            <ul>
+                <li>Creá tu cuenta</li>
+                <li>Ingresá</li>
+                <li>Mis compras</li>
+            </ul>
+        </nav>
     </header>
+    <!-- HEADER :: END -->
+
+    <!-- MAIN :: BEGIN -->
     <main>MAIN CONTENT</main>
+    <!-- MAIN :: END -->
+
+    <!-- FOOTER :: BEGIN -->
     <footer>FOOTER</footer>
+    <!-- FOOTER :: END -->
 </body>
 </html>

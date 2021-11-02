@@ -1,14 +1,22 @@
 {
   "name": "mercadoliebre",
   "version": "1.0.0",
-  "description": "",
+  "description": "Ejercicio - DH - Mercado Liebre",
   "main": "app.js",
+  "homepage": "https://github.com/comodinx/MercadoLiebre#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/comodinx/MercadoLiebre.git"
+  },
+  "author": "Nicolas Molina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/comodinx/MercadoLiebre/issues"
+  },
   "scripts": {
     "dev": "nodemon app",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "express": "^4.17.1"
   },

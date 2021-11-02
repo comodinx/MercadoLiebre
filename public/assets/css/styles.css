@@ -1,0 +1,59 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+    font-size: 0.9rem;
+}
+
+input {
+    border: 1 solid #fcfcfc;
+    border-radius: 5px;
+}
+
+header {
+    padding: 15px;
+    background-color: #EAC926;
+}
+
+header .header-brand {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .header-brand .header-brand-logo {
+    height: 40px;
+}
+
+header .header-brand .header-brand-search {
+    padding: 10px;
+}
+
+main {
+    background-color: #EBEBEB;
+}
+
+main section h3 {
+    margin: 0;
+    padding: 15px 15px 0;
+}
+
+main article {
+    margin: 15px;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #FFF;
+}
+
+main article p small {
+    margin-left: 15px;
+    color: #39B54A;
+}
+
+main article h4 {
+    margin: 0;
+}
+
+footer {
+    padding: 15px;
+}

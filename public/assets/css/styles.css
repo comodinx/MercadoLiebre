@@ -2,6 +2,7 @@
  * VARS
  */
 :root {
+    /* COLORS */
     --blue: #03264C;
     --cyan: #1259c3;
     --green: #39b54a;
@@ -11,17 +12,22 @@
     --white: #FFF;
     --black: #000;
 
+    /* FONTS */
     --font-family: Roboto;
-
     --font-size: 12px;
     --font-size-title: 24px;
     --font-size-price: 18px;
     --font-size-subtitle: 16px;
 
+    /* ICONS */
     --icon-size-lg: 2em;
 
+    /* SPACING */
     --spacing: 15px;
     --spacing-sm: 10px;
+
+    /* RADIUS */
+    --radius: 5px;
 }
 
 /*
@@ -33,6 +39,9 @@
     box-sizing: border-box;
 }
 
+/*
+ * GLOBAL
+ */
 body {
     background-color: var(--grey-light);
     font-family: var(--font-family);
@@ -41,7 +50,7 @@ body {
 
 input {
     border: 1 solid #fcfcfc;
-    border-radius: 5px;
+    border-radius: var(--radius);
 }
 
 /*
@@ -81,7 +90,7 @@ header {
 .header-brand .header-brand-search {
     background-color: var(--grey-light);
     border: 1px solid var(--grey-light);
-    border-radius: 5px;
+    border-radius: var(--radius);
     padding: var(--spacing-sm);
     padding-right: calc(var(--font-size) + var(--spacing-sm));
     width: 100%;
@@ -142,7 +151,7 @@ header {
     text-align: center;
     background-color: var(--cyan);
     color: var(--white);
-    border-radius: 5px;
+    border-radius: var(--radius);
     padding: var(--spacing);
 }
 
@@ -183,12 +192,10 @@ main {
  * PRODUCTS
  */
 .products {
-    margin: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    margin-left: calc(var(--spacing-sm) * -1);
-    margin-right: calc(var(--spacing-sm) * -1);
+    margin: 0 calc(var(--spacing-sm) * -1);
 }
 
 .products-header {
@@ -199,7 +206,7 @@ main {
 .products .product .product-content {
     padding: var(--spacing);
     margin: var(--spacing-sm);
-    border-radius: 5px;
+    border-radius: var(--radius);
     background-color: var(--white);
     font-size: var(--font-size-subtitle);
     flex-grow: 100%;

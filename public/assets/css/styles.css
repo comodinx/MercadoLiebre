@@ -269,7 +269,7 @@ main {
     }
 
     .header-brand {
-        flex-basis: 60%;
+        flex-basis: 67%;
     }
 
     .header-brand .header-brand-logo {
@@ -280,7 +280,7 @@ main {
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        flex-basis: 40%;
+        flex-basis: 33%;
         text-align: end;
     }
 

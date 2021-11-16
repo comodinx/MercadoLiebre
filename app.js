@@ -2,6 +2,7 @@
 // imports
 //
 const express = require('express');
+const bodyParser = require('body-parser');
 const path = require('path');
 const app = express();
 
@@ -15,14 +16,37 @@ const baseViewsPath = path.join(__dirname, 'views');
 // middlewares
 //
 app.use(express.static('public'));
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 //
 // routes
 //
+
+// home
 app.get('/', (req, res) => res.sendFile(path.join(baseViewsPath, 'home.html')));
 
+// register
+app.get('/register', (req, res) => res.sendFile(path.join(baseViewsPath, 'register.html')));
+app.post('/register', (req, res) => {
+    console.log('Sended form for register:', req.body);
+    res.redirect(302, '/');
+});
+
+// login
+app.get('/login', (req, res) => res.sendFile(path.join(baseViewsPath, 'login.html')));
+app.post('/login', (req, res) => {
+    console.log('Sended form for login:', req.body);
+    res.redirect(302, '/');
+});
+
 // error pages
-app.get('/404', (req, res) => res.send('Error página no encontrada'));
+
+// 404
+app.use((req, res, next) => res.status(404).sendFile(path.join(baseViewsPath, '404.html')));
+
+// uncached errors
+app.use((error, req, res, next) => res.status(500).sendFile(path.join(baseViewsPath, '500.html')));
 
 //
 // listen application

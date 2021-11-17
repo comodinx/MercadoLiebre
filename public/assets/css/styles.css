@@ -5,6 +5,7 @@
     /* COLORS */
     --blue: #03264C;
     --cyan: #1259c3;
+    --cyan-dark: #0022AA;
     --green: #39b54a;
     --yellow: #EAC926;
     --grey-dark: #666;
@@ -191,17 +192,29 @@ footer {
     text-align: center;
 }
 
-footer article:not(:first-child) {
+.footer-features {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.footer-features .footer-feature {
+    flex-basis: 100%;
+}
+
+.footer-features .footer-feature:not(:first-child) {
     margin-top: var(--spacing);
 }
 
-footer figure i {
+.footer-features .footer-feature i {
     color: var(--cyan);
     font-size: var(--icon-size-lg);
     margin-bottom: var(--spacing-sm);
 }
 
 footer .copyright {
+    margin-top: var(--spacing);
     color: var(--grey-dark);
     text-align: left;
 }
@@ -294,12 +307,17 @@ footer .copyright {
     border: none;
     border-radius: var(--radius);
     padding: var(--spacing-sm) var(--spacing);
+    transition: all 250ms ease;
 }
 
 .form-actions .form-action-reset {
     background-color: var(--grey-light);
     color: var(--black);
     margin-left: var(--spacing);
+}
+
+.form-actions .form-action-submit:hover {
+    background-color: var(--cyan-dark);
 }
 
 /*
@@ -333,6 +351,7 @@ main {
     background-color: var(--white);
     font-size: var(--font-size-subtitle);
     flex-grow: 100%;
+    transition: box-shadow 500ms ease;
 }
 
 .products .product .product-details {
@@ -353,6 +372,11 @@ main {
     position: absolute;
     top: -15px;
     right: 20px;
+    transition: transform 500ms ease;
+}
+
+.products .product:hover .product-delivery {
+    transform: rotate(-90deg);
 }
 
 .products .product .product-price {
@@ -423,18 +447,47 @@ main {
     }
 
     /*
+     * FOOTER
+     */
+    .footer-features {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footer-features .footer-feature {
+        flex-basis: 30%;
+    }
+
+    /*
      * PRODUCTS
      */
     .products .product {
         flex-basis: 50%;
     }
 
-    .products .product-content {
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    .products .product .product-details {
+        height: 65px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        transition: all 500ms ease;
     }
 
     .products .product .product-description {
         display: block;
+        opacity: 0;
+        height: 0;
+        transition: all 500ms ease;
+    }
+
+    .products .product:hover .product-content {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
+    .products .product:hover .product-description {
+        opacity: 1;
+        height: 20px;
     }
 }
 

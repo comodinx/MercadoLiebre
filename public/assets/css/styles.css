@@ -15,7 +15,8 @@
 
     /* FONTS */
     --font-family: Roboto;
-    --font-size: 12px;
+    --font-size-base: 8px;
+    --font-size: 2em;
     --font-size-title: 24px;
     --font-size-price: 18px;
     --font-size-subtitle: 16px;
@@ -47,7 +48,7 @@
 body {
     background-color: var(--grey-light);
     font-family: var(--font-family);
-    font-size: var(--font-size);
+    font-size: var(--font-size-base);
 }
 
 input {
@@ -89,6 +90,7 @@ header {
     flex-direction: column;
     padding: var(--spacing);
     background-color: var(--yellow);
+    font-size: var(--font-size);
 }
 
 .header-main {
@@ -190,6 +192,7 @@ footer {
     background-color: var(--white);
     padding: var(--spacing);
     text-align: center;
+    font-size: var(--font-size);
 }
 
 .footer-features {
@@ -327,6 +330,7 @@ main {
     width: 90%;
     margin: 0 auto;
     padding-bottom: var(--spacing-sm);
+    font-size: var(--font-size);
 }
 
 /*

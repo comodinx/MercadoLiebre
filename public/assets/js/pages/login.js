@@ -5,13 +5,11 @@
     let username = document.getElementById('username');
     let password = document.getElementById('password');
 
-    console.log(form);
-    console.log(username);
-    console.log(password);
-
     form.addEventListener('submit', function (e) {
-        e.preventDefault();
-        return validate();
+        if (!validate()) {
+            e.preventDefault();
+            return false;
+        }
     });
 
     function validate () {

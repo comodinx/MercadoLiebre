@@ -68,7 +68,7 @@
     <main>
         <section class="form-wrapper">
             <!-- FORM -->
-            <form method="POST" action="/register" class="form">
+            <form method="POST" action="/register" id="form" name="form" class="form">
                 <!-- FORM :: PERSONAL DATA -->
                 <div class="form-group">
                     <label class="form-label">Datos personales</label>
@@ -100,15 +100,15 @@
 
                 <!-- FORM :: ROLE -->
                 <div class="form-group">
-                    <label class="form-label">Perfil del usuario</label>
+                    <label class="form-label">Perfil del usuari@</label>
                     <div class="form-groups form-groups-inline">
                         <div class="form-group form-group-inline">
                             <input type="radio" class="form-input form-input-radio" id="role_buyer" name="role" value="1" />
-                            <label for="role_buyer" class="form-label">Comprador</label>
+                            <label for="role_buyer" class="form-label">Comprador/a</label>
                         </div>
                         <div class="form-group form-group-inline">
                             <input type="radio" class="form-input form-input-radio" id="role_seller" name="role" value="2" />
-                            <label for="role_seller" class="form-label">Vendedor</label>
+                            <label for="role_seller" class="form-label">Vendedor/a</label>
                         </div>
                     </div>
                 </div>
@@ -203,5 +203,9 @@
         </section>
     </footer>
     <!-- FOOTER :: END -->
+
+    <!-- SCRIPTS :: BEGIN -->
+    <script src="/assets/js/pages/register.js"></script>
+    <!-- SCRIPTS :: END -->
 </body>
 </html>

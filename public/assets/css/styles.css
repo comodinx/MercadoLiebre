@@ -25,8 +25,10 @@
     --icon-size-lg: 2em;
 
     /* SPACING */
-    --spacing: 15px;
     --spacing-sm: 10px;
+    --spacing: 15px;
+    --spacing-lg: 20px;
+    --spacing-big: 50px;
 
     /* RADIUS */
     --radius: 5px;
@@ -398,6 +400,25 @@ main {
 .products .product .product-description {
     margin-top: var(--spacing-sm);
     display: none;
+}
+
+/*
+ * ERROR
+ */
+.error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--spacing-big);
+}
+
+.error-title {
+    font-size: var(--font-size-title);
+    margin-bottom: var(--spacing-lg);
+}
+
+.error-image {
+    border-radius: var(--radius);
 }
 
 /*

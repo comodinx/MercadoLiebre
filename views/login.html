@@ -15,9 +15,11 @@
                     <img src="/assets/img/logo-mercado-liebre.svg" alt="Mercado Liebre" class="header-brand-logo" />
                 </a>
                 <div class="header-brand-search-wrapper">
-                    <input type="search" placeholder="¿Qué estas buscando?" class="header-brand-search" />
-                    <i class="fas fa-search header-brand-search-icon"></i>
-                </div> 
+                    <form onsubmit="javascript: function() {return false;}">
+                        <input type="search" placeholder="¿Qué estas buscando?" class="header-brand-search" />
+                        <i class="fas fa-search header-brand-search-icon"></i>
+                    </form>
+                </div>
             </div>
 
             <!-- HEADER :: LEGEND -->
@@ -66,7 +68,7 @@
     <main>
         <section class="form-wrapper">
             <!-- FORM -->
-            <form method="POST" action="/login" class="form">
+            <form method="POST" action="/login" id="form" class="form">
 
                 <!-- FORM :: ACCOUNT -->
                 <div class="form-group form-group-center">
@@ -128,5 +130,9 @@
         </section>
     </footer>
     <!-- FOOTER :: END -->
+
+    <!-- SCRIPTS :: BEGIN -->
+    <script src="/assets/js/pages/login.js"></script>
+    <!-- SCRIPTS :: END -->
 </body>
 </html>
